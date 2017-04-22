@@ -1,0 +1,2 @@
+[12-Mar-2015 07:08:16 UTC] PHP Fatal error:  Class 'Google_Service' not found in /home/igwsoft/public_html/test/Google/Service/YouTube.php on line 32
+[12-Mar-2015 08:02:48 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/igwsoft/public_html/ichibanlist/youtube/upload.php on line 79
