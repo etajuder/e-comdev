@@ -199,7 +199,7 @@
 			$photouploaded = 0;
 			if(count($photos)>0){
 				foreach($photos as $key=>$val){
-					?><img src="<?php print base_url();?><?php print $val->path;?>" style="width:100%;padding-bottom:20px;"><?php
+					?><img src="<?php print base_url();?><?php print $val->path;?>"  data-zoom-image="<?php print base_url();?><?php print $val->path;?>" style="width:100%;padding-bottom:20px;" id="zoom_01"><?php
 					break;
 				}
 			}
