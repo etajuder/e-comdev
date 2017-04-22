@@ -4,7 +4,7 @@ class Good extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model(array("datagood","datauser","dataitem","datalocation"));
+		$this->load->model(array("datagood","datauser","dataitem","datalocation","databid"));
 		$this->load->library("pagination");
 	}
 	

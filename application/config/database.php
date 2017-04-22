@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'keluarga_ichiban';
-$db['default']['password'] = 'merdeka1945';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'keluarga_ichibanlist';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
