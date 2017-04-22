@@ -313,7 +313,19 @@ case "auction": ?>
 					break;
 					
 				} ?>
+
 			<tr><td><strong>Author</strong></td><td><a href="<?=base_url();?>user/profile/<?=$sesi->author;?>"><strong><?=$this->datauser->getAuthorName($sesi->author);?></strong></a> <a class="btn btn-default" href="<?=base_url();?>user/createMessage/<?=$sesi->author;?>" title="Send message"><i class="fa fa-envelope-o"></i> </a></td></tr>
+			<tr><td><strong>User rating</strong></td><td><div id="rateYo"></div></td></tr>
+			<script>
+				$(function () {
+ 
+  $("#rateYo").rateYo({
+    precision: 2,
+    rating:"50%",
+    readOnly:true,
+  });
+});
+			</script>
 			<tr><td><strong>Date Posted</strong></td><td><?=date("Y-m-d H:i:s",$sesi->post_time);?></td></tr>
 			<?php if($this->router->fetch_class()!="forum"){?>
 			<tr><td><strong>Location</strong></td><td><?=$this->$modeldata->getLocation($sesi->id_location);?></td></tr>
