@@ -204,6 +204,7 @@
 				}
 			}
 		?>
+		<tr><td><strong>User rating</strong></td><td><div id="rateYo"></div></td></tr>
 		<div class="row" style="margin-bottom:20px;">
 			<div class="col-sm-12">
 				<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://<?php print $_SERVER['HTTP_HOST']."".$_SERVER['REQUEST_URI'];?>&pubid=ra-5342810a202a20bb&ct=1&title=<?php print $sesi->title;?>&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
@@ -315,20 +316,12 @@ case "auction": ?>
 				} ?>
 
 			<tr><td><strong>Author</strong></td><td><a href="<?=base_url();?>user/profile/<?=$sesi->author;?>"><strong><?=$this->datauser->getAuthorName($sesi->author);?></strong></a> <a class="btn btn-default" href="<?=base_url();?>user/createMessage/<?=$sesi->author;?>" title="Send message"><i class="fa fa-envelope-o"></i> </a></td></tr>
-			<tr><td><strong>User rating</strong></td><td><div id="rateYo"></div></td></tr>
-			<script>
-				$(function () {
- 
-  $("#rateYo").rateYo({
-    precision: 2,
-    rating:"50%",
-    readOnly:true,
-  });
-});
-			</script>
+			
+
 			<tr><td><strong>Date Posted</strong></td><td><?=date("Y-m-d H:i:s",$sesi->post_time);?></td></tr>
 			<?php if($this->router->fetch_class()!="forum"){?>
 			<tr><td><strong>Location</strong></td><td><?=$this->$modeldata->getLocation($sesi->id_location);?></td></tr>
+
 			<?php } ?>
 		</table>
 		<div id="content-post">
@@ -345,6 +338,28 @@ case "auction": ?>
 					}
 				?>							
 			</div>
+			
+			<script>
+				$(function () {
+  
+  $("#rateYo").rateYo({
+    precision: 2,
+    rating:"50%",
+    readOnly:true,
+  });
+
+   $("#rateUser").rateYo()
+              .on("rateyo.set", function (e, data) {
+              
+ 
+                  alert("The rating is set to " + data.rating +message+ "!");
+              });
+
+  $("#zoom_01").elevateZoom({
+  	zoomWindowPosition: 2
+  });
+});
+			</script>
 				<script type="text/javascript">
 				$(document).ready(function(){
 					$(".bank-thumb").on('click',function(){
@@ -374,8 +389,9 @@ case "auction": ?>
 					
 				} ?>
 			<?php } ?>
-
+            <tr><td><strong>Rate User</strong></td><td><div id="rateUser"></div></td></tr>
 			<hr>
+			
 			<?php  if ( $this->router->fetch_class()=="good") {
 				if (count($bank) > 1) {
 			
@@ -388,6 +404,7 @@ case "auction": ?>
 				<u><h4>Direct Transfer</h4></u>
 				<?php foreach ($bank as $key) {
 				?>
+
 				<div class="col-xs-4 col-sm-2 text-center" id="<?=$key->id_bank;?>_photo" style="margin-bottom:15px;">
 								<img src="<?=base_url()?><?=$key->image_bank;?>" class="bank-thumb preview-thumb" style="cursor:pointer;">
 				<div class="detail-bank">
@@ -404,6 +421,7 @@ case "auction": ?>
 			</div>
 			<?php } ?>
 			<div style="height:20px" class="clearfix"></div>
+
 			<?php if(is_array($this->session->userdata("user"))){ ?>
 			<form method="POST" action="<?=base_url();?><?=$this->router->fetch_class();?>/postComment" id="contact_form">
 				<div class="row form-group">

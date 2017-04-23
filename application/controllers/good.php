@@ -1,11 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Good extends CI_Controller {
-
+    var $data = [];
 	public function __construct(){
 		parent::__construct();
 		$this->load->model(array("datagood","datauser","dataitem","datalocation","databid"));
 		$this->load->library("pagination");
+		
+
 	}
 	
 	public function post(){

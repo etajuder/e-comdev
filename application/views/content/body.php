@@ -46,7 +46,7 @@
 		<?php $this->load->view("content/footer");?>
 		<script type="text/javascript">
 
-			$("#zoom_01").elevateZoom();
+			
 			
 		</script>
 	</body>
