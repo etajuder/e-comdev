@@ -10,7 +10,11 @@ class Datauser extends CI_Model {
     {
         
     }
-	
+
+	public function get_rating($id_user){
+          
+	}
+
 	public function getAuthorName($id_user){
 		$this->db->where("id_user",$id_user);
 		$data = $this->db->get("tb_user");

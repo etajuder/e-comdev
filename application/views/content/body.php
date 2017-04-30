@@ -11,12 +11,13 @@
 		<link href="<?=base_url()?>assets/css/ionicons.min.css" rel="stylesheet">
 		<!--<link href="<?php//print base_url()?>assets/css/bootstrap-theme.css" rel="stylesheet">-->
 		<link rel="stylesheet" href="<?=base_url()?>assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 		<script src="<?=base_url()?>assets/js/jquery.js"></script>
 		<script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js"></script>
 
 <script src="http://www.elevateweb.co.uk/wp-content/themes/radial/jquery.elevatezoom.min.js" type="text/javascript"></script>
 <script src="http://www.elevateweb.co.uk/wp-content/themes/radial/jquery.fancybox.pack.js" type="text/javascript"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 		<script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="<?=base_url()?>assets/img/favicon.png">
 <script type="text/javascript">
@@ -44,7 +45,9 @@
 		<?php $this->load->view($content);?>
 		<?php $this->load->view("content/footer");?>
 		<script type="text/javascript">
-			$("#zoom_01").elevateZoom();
+
+			
+			
 		</script>
 	</body>
 </html>

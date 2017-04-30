@@ -3,3 +3,4 @@ license.txt
 test/
 vendor/
 composer.json
+/nbproject/private/
