@@ -10,9 +10,9 @@ class Datauser extends CI_Model {
     {
         
     }
-    
-	public function get_rating($id_user){
 
+	public function get_rating($id_user){
+          
 	}
 
 	public function getAuthorName($id_user){

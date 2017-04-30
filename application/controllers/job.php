@@ -6,6 +6,7 @@ class Job extends CI_Controller {
 		parent::__construct();
 		$this->load->model(array("datajob","datauser","datalocation","datacategory", "databid"));
 		$this->load->library("pagination");
+                $this->load->helper('text');
 	}
 	
 	public function index(){
@@ -200,8 +201,9 @@ class Job extends CI_Controller {
 	
 	public function addProcess(){
 		$user = $this->session->userdata("user");
+                
 		$data = array(
-			"url_post"			=> $_POST['url_post'],
+			"url_post"			=> $_POST['url_title'] == ''? url_title(ascii_to_entities(convert_accented_characters(urlencode($_POST['title'])))):$_POST['url_title'],
 			"title"				=> $_POST['title'],
 			"tags"				=> $_POST['tags'],
 			"content"			=> $_POST['content'],
