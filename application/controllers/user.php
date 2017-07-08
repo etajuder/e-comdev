@@ -366,7 +366,8 @@ class User extends CI_Controller {
 			"phone"			=> $_POST['phone'],
 			"about_me"		=> $_POST['about_me'],
 			"avatar"		=> $_POST['avatar'],
-			"id_location"	=> $_POST['id_location']
+			"id_location"	=> $_POST['id_location'],
+			"dateofbirth"   => $_POST['dateofbirth']
 		);
 		$rules = array(
 			array(
