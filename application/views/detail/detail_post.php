@@ -331,7 +331,7 @@ case "auction": ?>
 						foreach($photos as $key=>$val){
 							?>
 							<div class="col-xs-4 col-sm-2 text-center" id="<?=$val->id_photo;?>_photo" style="margin-bottom:15px;">
-								<img src="<?=base_url()?><?=$val->path;?>" class="preview-thumb">
+								<img src="<?=base_url()?><?=$val->path;?>" class="preview-thumb extra">
 							</div>
 							<?php
 						}
