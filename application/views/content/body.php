@@ -44,6 +44,7 @@
 		?>
 		<?php $this->load->view($content);?>
 		<?php $this->load->view("content/footer");?>
+		<script src="<?=base_url()?>assets/js/script.js"></script>
 		<script type="text/javascript">
 
 			

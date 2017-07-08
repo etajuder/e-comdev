@@ -4,3 +4,4 @@ test/
 vendor/
 composer.json
 /nbproject/private/
+node_modules/
