@@ -9,6 +9,7 @@
 		<link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?=base_url()?>assets/css/styles.css" rel="stylesheet">
 		<link href="<?=base_url()?>assets/css/ionicons.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 		<!--<link href="<?php//print base_url()?>assets/css/bootstrap-theme.css" rel="stylesheet">-->
 		<link rel="stylesheet" href="<?=base_url()?>assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
@@ -18,6 +19,7 @@
 <script src="http://www.elevateweb.co.uk/wp-content/themes/radial/jquery.elevatezoom.min.js" type="text/javascript"></script>
 <script src="http://www.elevateweb.co.uk/wp-content/themes/radial/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="<?=base_url()?>assets/img/favicon.png">
 <script type="text/javascript">

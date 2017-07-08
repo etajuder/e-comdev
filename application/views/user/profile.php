@@ -73,6 +73,17 @@
 								</div>
 							</div>
 						</div>
+						<div class="form-group row">
+							<label class="col-sm-4">
+								Date of birth
+							</label>
+							<div class="col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1"><i class="ion-ios-calendar icon-big"></i></span>
+									<input type="text" class="form-control" name="dateofbirth" id="datepicker" placeholder="Your Birth date" required="" value="<?=$sesi->dateofbirth?>">
+								</div>
+							</div>
+						</div>
 						
 						<div class="form-group row">
 							<label class="col-sm-4">
@@ -279,4 +290,8 @@
 			$("#progressloading").hide();
 		});
 	});
+   $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
 </script>
