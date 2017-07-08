@@ -25,9 +25,9 @@
 							<li class="<?php if($this->router->fetch_class()=="job" &&$this->router->fetch_method()=="index") { echo "head-active"; } ?> master-option" ><a href="<?=base_url()?>job"><?=$this->lang->line("head_super_menu_job");?></a></li>
                                                         <li class="<?php if($this->router->fetch_class()=="auction" &&$this->router->fetch_method()=="index") { echo "head-active"; } ?> master-option" ><a href="<?=base_url()?>auction"><?=$this->lang->line("head_super_menu_auction");?></a></li>
 						</ul>
-						<form method="get" action="" class="navbar-form navbar-left" role="search">
+						<form method="get" action="<?=base_url('good')?>" class="navbar-form navbar-left" role="search">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="<?=$this->lang->line("head_super_menu_search_placeholder");?>">
+								<input type="text" class="form-control" name="keyword" placeholder="<?=$this->lang->line("head_super_menu_search_placeholder");?>">
 							</div>
 							<button type="submit" class="btn btn-orange"><?=$this->lang->line("head_super_menu_search_button");?></button>
 						</form>
